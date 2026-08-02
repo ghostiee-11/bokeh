@@ -532,7 +532,7 @@ export class DataTable extends TableWidget {
     return this._sort_columns
   }
 
-  constructor(attrs?: Partial<DataTable.Attrs>) {
+  protected constructor(attrs?: Partial<DataTable.Attrs>) {
     super(attrs)
   }
 

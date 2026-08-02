@@ -30,7 +30,7 @@ export interface TableColumn extends TableColumn.Attrs {}
 export class TableColumn extends Model {
   declare properties: TableColumn.Props
 
-  constructor(attrs?: Partial<TableColumn.Attrs>) {
+  protected constructor(attrs?: Partial<TableColumn.Attrs>) {
     super(attrs)
   }
 
