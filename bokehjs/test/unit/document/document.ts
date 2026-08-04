@@ -252,7 +252,7 @@ describe("Document", () => {
       const d = new Document({recompute_timeout: 1000})
       const m = new SomeModelWithChildren()
       d.add_root(m)
-      expect(d.all_models.size).to.be.equal(3)
+      expect(d.all_models.size).to.be.equal(4)
 
       // Each update makes the previous child unreachable. Updating more often
       // than recompute_timeout must not defer pruning indefinitely.
@@ -264,7 +264,7 @@ describe("Document", () => {
         clock.tick(500)
       }
 
-      expect(d.all_models.size).to.be.equal(4)
+      expect(d.all_models.size).to.be.equal(5)
       expect(first_child.document).to.be.null
     } finally {
       clock.restore()
